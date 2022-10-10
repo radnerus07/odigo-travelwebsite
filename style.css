@@ -1,0 +1,795 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: lato, sans-serif;
+}
+
+h1,
+.heading-h1{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+h2,
+.heading-h2 {
+    color: #102746;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+h3,
+.heading-h3{
+    color: #102746;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 500;
+}
+
+h4,
+.heading-h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+p,
+.paragraph-p {
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+   
+    overflow: hidden;
+}
+
+.container2 {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding:  0 20px;
+  
+}
+
+.btn {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 39px;
+}
+
+.btn-primary {
+    background-color: #1b7dff;
+    color: #fff;
+}
+
+.btn-lg{
+    
+    font-size: 24px;
+    font-weight: 500;
+}
+.btn-sm{
+  
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* .............navigation--bar............ */
+
+.navbar {
+    padding: 40px 40px;
+    text-align: right;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navbar .navbar__navlinks {
+    padding: 30px 0;
+    display: inline-block;
+  }
+  
+  .navbar .navbar__navlinks li {
+    display: inline-block;
+    margin: 0 83px 0 0;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .navbar__navlinks :hover {
+    color: #2f3031;
+    background-color: #b6bab7;
+  }
+  
+  .nav__link {
+    font-size: 18px;
+    text-shadow: 30px;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .navbar__brand__logo {
+    float: left;
+    margin: 40px 0;
+  }
+  
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /* .............navigation--bar end............ */
+
+/* ...........hamburger........... */
+
+
+.navigation {
+    display: block;
+  }
+  .navbar__brand__logo a{
+  display: inline-block;
+  }
+  .nav-toggle-label {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: none;
+  }
+  
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 32px;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+  }
+  
+  .nav-toggle-label span::before {
+    bottom: 7px;
+  }
+  
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+ 
+  /* ...........hamburger end........... */
+
+
+/* ................hero section.............. */
+
+
+.banner__image {
+   
+    height: 962px;
+    width: 100%;
+    background: url("https://live.staticflickr.com/65535/52408443403_083bd50935_k.jpg") no-repeat center/cover;
+   
+  }
+
+.wrapper{
+   position: absolute;
+   top:50%;
+   transform: translate(0,-50%);
+   width: 100%;
+   padding: 20px;
+  }
+  .hero__heading-h1_title{
+    margin-bottom: 22px;
+    padding-right: 267px;
+  }
+.hero__paragraph-p_cnt{
+    color: #fff;
+    padding-right: 483px;
+    margin-bottom: 59px;
+}
+
+.wrapper__links li{
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.wrapper__links li:not(:last-child):before{
+    content: url("circle.svg");
+    padding-right: 23px;
+}
+
+.wrapper__items{
+    display: inline-block;
+    padding-right: 96px;
+}
+.wrapper__links li:not(:last-child):after {
+    content: ""; 
+    display: block; 
+    width: 80%; 
+    border-bottom:solid 2px #fff; 
+    padding-top: 20px;
+    
+}
+
+.wrapper a{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wrapper__items {
+  border-style: hidden;
+  background-color: transparent;
+  color: #FFF;
+  
+  
+}
+input,
+input::placeholder {
+    font: 18px lato;
+    color: #fff;
+    line-height: 24px;
+    width: 325px;
+}
+
+.wrapper__items:focus {
+  outline: none;
+  color: white;
+}
+
+
+
+
+/* ................section-1 end................ */
+
+/* ...................section-2 start.................. */
+
+
+.heading-h2_title {
+  padding: 0 0 120px 0;
+}
+
+.ms2{
+  margin: -200px auto 0;
+  background-color: #fff;
+  box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
+  padding: 93px 0 112px 0;
+}
+
+/* ...cards section...... */
+
+.card__items {
+   
+   width: calc(100%/3);
+   float: left;
+   list-style: none;
+}
+
+.card__title {
+  color: #000000;
+  margin-bottom: 26px;
+  
+}
+
+.card__items a{
+  display: inline-block;
+}
+
+.card__image {
+ width: 66px;
+ height: auto;
+ margin-bottom: 37px;
+}
+
+.card__paragraph-p {
+  margin-bottom: 39px;
+
+}
+
+.card__linkarrow {
+  text-decoration: none;
+  color: #000000;
+  
+ 
+}
+
+.card__linkarrow:hover {
+  color: #006dfe;
+  margin-right: 30px;
+
+}
+
+/* ..........section2 end................ */
+ /* ............section3 starts...................... */
+.trip-places_heading {
+  display: inline-block;
+  list-style: none;
+  width: calc((100%/2) - 10px);
+
+}
+.trip-places {
+  padding: 131px 0;
+}
+ .trip-places_title {
+  
+   display: inline-block;
+
+ }
+
+ .trip-places_title:after {
+  content: ""; 
+  display: block; 
+  width: 60%; 
+  border-bottom:solid 3px #006dfe;
+  padding-top: 7px;
+  
+}
+
+
+.trip-places_link {
+  text-align: end;
+}
+
+.trip-places_left {
+  margin-bottom: 46px;
+}
+
+.twoclm-layout {
+  width: calc((100%/2) - 5px);
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  
+}
+
+.twoclm-layout:not(:last-child) {
+  margin: 0 10px 10px 0;
+}
+
+.trip-locations {
+  font-size: 0;
+}
+
+.trip-locations__img {
+  width: 100%;
+  height: 354px;
+  object-fit: cover;
+ 
+}
+.overlay {
+  background-color:#151824;
+  position: absolute;
+  
+  width: 100%;
+  z-index: 10;
+  opacity: .4;
+  top: 0;
+}
+.overlay-sm{
+  height: 283px;
+}
+.overlay-lg{
+  height: 354px;
+}
+
+.trip-locations__name{
+  position: absolute;
+  bottom:0;
+  z-index: 20;
+  padding: 0 0 29px 27px;
+}
+
+.threeclm-layout {
+  width: calc((100%/3) - 7px);
+  /* float: right; */
+  display: inline-block;
+  position: relative;
+ 
+}
+.threeclm-layout:not(:last-child) {
+ margin: 0 10px 10px 0;
+}
+
+.trip-locations__img-sm {
+  width: 100%;
+  height: 283px;
+  object-fit: cover;
+}
+/* ...............section3 ends.......... */
+
+/* ...............section4 starts............. */
+
+.place-details {
+  padding-bottom: 139px;
+ 
+}
+.place-details-r1  {
+  padding-bottom: 77px;
+}
+.place-details__layout {
+  width: calc(100%/2);
+  float: left;
+}
+.right {
+  text-align: center;
+}
+.left {
+  max-width: 596px;
+  text-align: left;
+  padding: 28px 43px 49px 90px;
+}
+
+.place-details img {
+  height: 354px;
+  width: 596px;
+}
+
+.place-details__card-title {
+  margin-bottom: 45px;
+}
+.place-details__card-para {
+  color: #102746;
+  margin-bottom: 56px;
+}
+
+.box-items {
+  
+  width: calc(100%/3);
+  display: inline-block;
+  padding: 30px;
+}
+.box-img {
+  height: 354px;
+  width: 100%;
+  object-fit: cover;
+
+}
+.imagebox {
+  font-size: 0;
+  padding: 0 0 144px 0;
+}
+
+.box-content {
+  padding: 41px 0 31px 0;
+}
+
+
+.box-item_merge {
+  position: relative;
+}
+.img-content {
+  padding: 12px 25px;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(21, 24, 36, 0.6);
+  position: absolute;
+  bottom: 0;
+  font-size: 18px;
+    line-height: 1.33;
+    font-weight: 400;
+    color: #fff;
+    z-index: 10;
+}
+ .img-content__text{
+  display: inline-block;
+  color: #fff;
+ }
+
+ 
+
+ .icons::before {
+  content: url("heart-filled.svg");
+  padding: 0  14px 0 0;
+ }
+
+.icons::after {
+  content: url("message-detail.svg");
+  padding: 0  0 0 5px;
+}
+
+ .img-like {
+  font-size: 16px;
+  text-align: end;
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  right: 10%;
+ }
+
+/* ............footsection.... */
+.footer__clip {
+  font-size: 0;
+}
+
+.footer__clip-image {
+  height: 609px;
+  width: 100%;
+  object-fit: cover;
+}
+.footer-content {
+  
+  width: 100%;
+  background-color: #0e1d28;
+  display: inline-block;
+  padding: 118px 0;
+}
+
+.footer-content__nav ul li {
+  list-style: none;
+}
+
+.navitems  li {
+  list-style: none;
+  color: #FFF;
+}
+
+.navitems li:hover {
+  color:#006dfe;
+}
+.col-1 {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+
+.navitems {
+  float: right;
+  width: 20%;
+}
+
+.col-1 a{
+  display: inline-block;
+  font-size: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+h1,
+.heading-h1{
+    font-size: 40px;
+}
+h2,
+.heading-h2 {
+    font-size: 28px;
+}
+p,
+.paragraph-p {
+    font-size: 14px;
+    line-height: 18px;
+
+}
+
+/* ...........hamburger........... */
+.nav-toggle-label {
+    display: block;
+}
+
+.navigation {
+    display: none;
+}
+/* ...........hamburger end........... */
+/* ................hero section.............. */
+
+
+.banner__image {
+  height: 1062px;
+}
+
+.hero__heading-h1_title{
+  margin-bottom: 18px;
+  padding-right: 190px;
+}
+.hero__paragraph-p_cnt{
+
+  padding-right: 240px;
+  margin-bottom: 39px;
+}
+.threeclm-layout {
+  margin: 0  10px 10px 0;
+}
+
+
+.wrapper__links li:not(:last-child):before{
+  padding-right: 16px;
+}
+
+.wrapper__items{
+  padding-right: 76px;
+}
+.wrapper__links li:not(:last-child):after {
+  width: 70%;
+  margin: 0 0 10px 0;
+}
+
+input,
+input::placeholder {
+  font: 16px lato;
+  width: 300px;
+}
+
+/* ................section-1 end................ */
+/* ................section-2 start................ */
+.heading-h2_title {
+  text-align: center;
+}
+.card__items {
+  width: calc(100%/2);
+  text-align: center;
+}
+.card__items:nth-last-child(1) {
+  width: 100%;
+}
+/* ...............section-2 end................ */
+ /* ............section3 starts...................... */
+ 
+ .twoclm-layout {
+  width:100%;
+  margin-bottom: 10px;
+  
+}
+.threeclm-layout {
+  width: calc((100%/2) - 10px);
+}
+
+.trip-locations {
+  text-align: center;
+}
+
+/* ...............section3 ends.......... */
+/* ...............section4 starts............. */
+.place-details__layout {
+  float: none;
+  display: inline-block;
+}
+.place-details {
+  text-align: center;
+}
+.left {
+  padding: 0;
+}
+.box-items {
+  width: calc(100%/2);
+}
+  }
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+     /* ............section3 starts...................... */
+h1,
+.heading-h1 {
+  font-size: 30px;
+}
+.twoclm-layout {
+  width:100%;
+  
+}
+h2, .heading-h2 {
+  font-size: 20px;
+}
+p,
+.paragraph-p {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.threeclm-layout {
+  width: 100%;
+}
+
+.hero__paragraph-p_cnt {
+  padding-right: 140px;
+  margin-bottom: 20px;
+}
+.hero__heading-h1_title {
+  margin-bottom: 18px;
+  padding-right: 120px;
+  /* padding-top: 130px; */
+  line-height: 30px;
+}
+
+.banner__image {
+  height: 862px;
+}
+/* ...............section3 ends.......... */
+    
+    /* ................section-2 start................ */
+.heading-h2_title {
+  padding: 0 0 60px 0;
+}
+.card__items {
+  width: 100%;
+}
+.card__items:not(:last-child) {
+  border-bottom: 1px solid grey;
+    margin: 0 0 20px;
+}
+.trip-locations {
+  
+  padding-top: 10px;
+}
+/* ...............section-2 end................ */
+
+
+
+input, input::placeholder {
+  font: 16px lato;
+  width: 200px;
+}
+.wrapper__links li:not(:last-child):after {
+  width: 100%;
+}
+.btn-lg {
+  font-size: 14px;
+  font-weight: 500;
+}
+/* ...............section4 starts............. */
+
+.place-details__layout {
+  width: 100%;
+ 
+}
+.box-items {
+  width: 100%;
+}
+
+.navitems {
+  text-align: center;
+  float: none;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+.col-1 {
+  float: none;
+  width: 100%;
+
+}
+.card__linkarrow {
+  font-size: 12px;
+}
+
+
+  }
