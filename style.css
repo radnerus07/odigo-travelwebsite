@@ -43,17 +43,23 @@ p,
 }
 
 .container1 {
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+ 
+ 
 }
 
 .container2 {
   max-width: 1400px;
-  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
-  padding:  0 20px;
-  
 }
 
 .btn {
@@ -108,19 +114,29 @@ p,
     margin: 0 83px 0 0;
     color: #fff;
     padding: 10px;
+    
   }
-  
-  .navbar__navlinks :hover {
-    color: #2f3031;
-    background-color: #b6bab7;
-  }
-  
   .nav__link {
     font-size: 18px;
     text-shadow: 30px;
     color: #fff;
     letter-spacing: 1px;
+   
   }
+
+  .nav__link::after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+  }
+  
+  .nav__link:hover::after {
+    width: 100%;
+  }
+ 
   
   .navbar__brand__logo {
     float: left;
@@ -797,7 +813,4 @@ input, input::placeholder {
   font-size: 12px;
 }
 
-.container2 {
-  padding: 0;
-}
   }
