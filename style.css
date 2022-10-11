@@ -48,7 +48,7 @@ p,
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  overflow-x: hidden;
  
  
 }
@@ -59,7 +59,7 @@ p,
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .btn {
@@ -324,14 +324,13 @@ input::placeholder {
 .card__linkarrow {
   text-decoration: none;
   color: #000000;
-  
+  transition: margin-right .3s, color .3s;
  
 }
 
 .card__linkarrow:hover {
-  color: #006dfe;
   margin-right: 30px;
-
+  color: #006dfe;
 }
 
 /* ..........section2 end................ */
@@ -394,10 +393,9 @@ input::placeholder {
 .overlay {
   background-color:#151824;
   position: absolute;
-  
   width: 100%;
   z-index: 10;
-  opacity: .4;
+  opacity: .5;
   top: 0;
 }
 .overlay-sm{
@@ -470,16 +468,16 @@ input::placeholder {
 
 .box-items {
   
-  width: calc(100%/3);
+  width: calc((100% - 75px)/3 );
   display: inline-block;
-  padding: 50px;
+  margin: 50px 0 0 25px;
 }
 
 
 
 .box-img {
   height: 354px;
-  width: 386px;
+  max-width: 100%;
   object-fit: cover;
 
 }
@@ -500,7 +498,7 @@ input::placeholder {
 .img-content {
   padding: 12px 25px;
   height: 50px;
-  width: 386px;
+  width: 100%;
   background-color: rgba(21, 24, 36, 0.6);
   position: absolute;
   bottom: 0;
@@ -621,8 +619,6 @@ p,
     line-height: 18px;
 
 }
-
-/* ...........hamburger........... */
 .nav-toggle-label {
     display: block;
 }
@@ -630,9 +626,6 @@ p,
 .navigation {
     display: none;
 }
-/* ...........hamburger end........... */
-/* ................hero section.............. */
-
 
 .banner__image {
   height: 1062px;
@@ -650,7 +643,6 @@ p,
 .threeclm-layout {
   margin: 0  10px 10px 0;
 }
-
 
 .wrapper__links li:not(:last-child):before{
   padding-right: 16px;
@@ -670,8 +662,6 @@ input::placeholder {
   width: 300px;
 }
 
-/* ................section-1 end................ */
-/* ................section-2 start................ */
 .heading-h2_title {
   text-align: center;
 }
@@ -682,8 +672,6 @@ input::placeholder {
 .card__items:nth-last-child(1) {
   width: 100%;
 }
-/* ...............section-2 end................ */
- /* ............section3 starts...................... */
  
  .twoclm-layout {
   width:100%;
@@ -698,8 +686,6 @@ input::placeholder {
   text-align: center;
 }
 
-/* ...............section3 ends.......... */
-/* ...............section4 starts............. */
 .place-details__layout {
   float: none;
   display: inline-block;
@@ -711,9 +697,13 @@ input::placeholder {
   padding: 0 0 20px 0;
 }
 .box-items {
-  width: calc(100%/2);
+  width: calc((100% - 50px)/2);
+}
+.box-content {
+  padding: 41px 100px 31px 0;
 }
   }
+  
 
 
 
@@ -755,9 +745,6 @@ p,
 .banner__image {
   height: 862px;
 }
-/* ...............section3 ends.......... */
-    
-    /* ................section-2 start................ */
 .heading-h2_title {
   padding: 0 0 60px 0;
 }
@@ -769,12 +756,12 @@ p,
     margin: 0 0 20px;
 }
 .trip-locations {
-  
   padding-top: 10px;
 }
-/* ...............section-2 end................ */
 
-
+.trip-places{
+  padding: 80px 0;
+}
 
 input, input::placeholder {
   font: 16px lato;
@@ -787,15 +774,19 @@ input, input::placeholder {
   font-size: 14px;
   font-weight: 500;
 }
-/* ...............section4 starts............. */
 
 .place-details__layout {
   width: 100%;
- 
+}
+.place-details{
+  padding-bottom: 70px;
 }
 .box-items {
   width: 100%;
-  padding: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
+}
+.box-content {
+  padding: 41px 0 31px 0;
 }
 
 .navitems {
@@ -812,5 +803,13 @@ input, input::placeholder {
 .card__linkarrow {
   font-size: 12px;
 }
-
+.resize {
+  zoom: 0.7;
+}
+.ms2 {
+  padding: 70px 0 60px 0;
+}
+.imagebox{
+ padding: 0 0 70px 0;
+}
   }
