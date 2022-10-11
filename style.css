@@ -111,12 +111,12 @@ p,
   
   .navbar .navbar__navlinks li {
     display: inline-block;
-    margin: 0 83px 0 0;
     color: #fff;
-    padding: 10px;
-    
   }
-  .nav__link {
+  .navbar .navbar__navlinks li:not(:last-child) {
+    margin-right: 83px;
+  }
+    .nav__link {
     font-size: 18px;
     text-shadow: 30px;
     color: #fff;
@@ -129,6 +129,7 @@ p,
     display: block;
     width: 0;
     height: 2px;
+    margin-top: 10px;
     background: #fff;
     transition: width .3s;
   }
@@ -561,10 +562,12 @@ input::placeholder {
 .navitems  li {
   list-style: none;
   color: #FFF;
+  transition: font-size 0.2s;
 }
 
 .navitems li:hover {
   color:#006dfe;
+  font-size: 18px;
 }
 .col-1 {
   float: left;
@@ -573,7 +576,7 @@ input::placeholder {
 }
 
 .navitems {
-  float: right;
+  float: left;
   width: 20%;
 }
 
@@ -770,6 +773,9 @@ input, input::placeholder {
 .wrapper__links li:not(:last-child):after {
   width: 100%;
 }
+.wrapper__items {
+  padding-right: 76px;
+}
 .btn-lg {
   font-size: 14px;
   font-weight: 500;
@@ -783,7 +789,7 @@ input, input::placeholder {
 }
 .box-items {
   width: 100%;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 0 0;
 }
 .box-content {
   padding: 41px 0 31px 0;
