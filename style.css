@@ -45,7 +45,6 @@ p,
 .container1 {
     max-width: 1200px;
     margin: 0 auto;
-   
     overflow: hidden;
 }
 
@@ -84,7 +83,7 @@ p,
 /* .............navigation--bar............ */
 
 .navbar {
-    padding: 40px 40px;
+    padding: 20px 20px;
     text-align: right;
     position: fixed;
     z-index: 5;
@@ -390,6 +389,7 @@ input::placeholder {
 }
 .overlay-lg{
   height: 354px;
+  
 }
 
 .trip-locations__name{
@@ -441,7 +441,7 @@ input::placeholder {
 
 .place-details img {
   height: 354px;
-  width: 596px;
+  max-width: 100%;
 }
 
 .place-details__card-title {
@@ -456,11 +456,14 @@ input::placeholder {
   
   width: calc(100%/3);
   display: inline-block;
-  padding: 30px;
+  padding: 50px;
 }
+
+
+
 .box-img {
   height: 354px;
-  width: 100%;
+  width: 386px;
   object-fit: cover;
 
 }
@@ -470,17 +473,18 @@ input::placeholder {
 }
 
 .box-content {
-  padding: 41px 0 31px 0;
+  padding: 41px 50px 31px 0;
 }
 
 
 .box-item_merge {
   position: relative;
+  display: inline-block;
 }
 .img-content {
   padding: 12px 25px;
   height: 50px;
-  width: 100%;
+  width: 386px;
   background-color: rgba(21, 24, 36, 0.6);
   position: absolute;
   bottom: 0;
@@ -500,11 +504,13 @@ input::placeholder {
  .icons::before {
   content: url("heart-filled.svg");
   padding: 0  14px 0 0;
+  vertical-align: middle;
  }
 
 .icons::after {
   content: url("message-detail.svg");
   padding: 0  0 0 5px;
+  vertical-align: middle;
 }
 
  .img-like {
@@ -686,7 +692,7 @@ input::placeholder {
   text-align: center;
 }
 .left {
-  padding: 0;
+  padding: 0 0 20px 0;
 }
 .box-items {
   width: calc(100%/2);
@@ -727,7 +733,6 @@ p,
 .hero__heading-h1_title {
   margin-bottom: 18px;
   padding-right: 120px;
-  /* padding-top: 130px; */
   line-height: 30px;
 }
 
@@ -774,6 +779,7 @@ input, input::placeholder {
 }
 .box-items {
   width: 100%;
+  padding: 20px 0 20px 0;
 }
 
 .navitems {
@@ -791,5 +797,7 @@ input, input::placeholder {
   font-size: 12px;
 }
 
-
+.container2 {
+  padding: 0;
+}
   }
