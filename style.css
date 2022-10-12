@@ -787,6 +787,12 @@ input, input::placeholder {
 .place-details{
   padding-bottom: 70px;
 }
+.box-img {
+  width: 100%;
+}
+.box-item_merge {
+  width: 100%;
+}
 .box-items {
   width: 100%;
   margin: 20px 0 0 0;
