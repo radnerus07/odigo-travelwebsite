@@ -190,6 +190,7 @@ p,
   width: 100%;
   background: url("https://live.staticflickr.com/65535/52408443403_083bd50935_k.jpg")
     no-repeat center/cover;
+    position: relative;
 }
 
 .hero article {
@@ -264,6 +265,7 @@ input::placeholder {
 }
 
 .Benefits {
+  position: relative;
   margin: -150px auto 0;
   background-color: #fff;
   box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
