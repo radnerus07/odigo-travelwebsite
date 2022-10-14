@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: lato, sans-serif;
 }
-
 h1,
 .heading-h1 {
   color: #ffffff;
@@ -41,20 +40,10 @@ p,
   line-height: 24px;
   font-weight: 400;
 }
-
-.inner-container {
-  max-width: 1200px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: hidden;
-}
-
 .container {
-  max-width: 1400px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1362px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
@@ -72,11 +61,11 @@ p,
 .btn-primary {
   background-color: #1b7dff;
   color: #fff;
-  transition: background-color .4s;
+  transition: box-shadow 0.4s;
+  border: 1px #1b7dff;
 }
 .btn-primary:hover {
-  background-color: #fff;
-  color: #1b7dff;
+  box-shadow: 0 0 20px 10px rgba(30, 136, 245, 0.4);
 }
 
 .btn-lg {
@@ -89,15 +78,16 @@ p,
 }
 
 /* .............navigation--bar............ */
-
+.header-hero {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.nav-wrapper {
+  padding: 56px 10px;
+}
 .navbar {
-  padding: 20px 20px;
   text-align: right;
-  position: fixed;
-  z-index: 5;
-  top: 0;
-  right: 0;
-  left: 0;
 }
 
 .navbar a {
@@ -107,7 +97,6 @@ p,
 }
 
 .navbar .navbar__navlinks {
-  padding: 30px 0;
   display: inline-block;
 }
 
@@ -123,7 +112,6 @@ p,
   text-shadow: 30px;
   color: #fff;
   letter-spacing: 1px;
-
 }
 
 .nav__link::after {
@@ -138,12 +126,10 @@ p,
 
 .nav__link:hover::after {
   width: 100%;
-  
 }
 
 .navbar__brand__logo {
   float: left;
-  margin: 40px 0;
 }
 
 .clearfix::after {
@@ -157,12 +143,12 @@ p,
 /* ...........hamburger........... */
 
 .navigation {
-  display: block;
+  display: inline-block;
 }
 .navbar__brand__logo a {
   display: inline-block;
 }
-.nav-toggle-label {
+.ham-button {
   position: absolute;
   right: 10%;
   top: 50%;
@@ -170,9 +156,9 @@ p,
   display: none;
 }
 
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.ham-button span,
+.ham-button span::before,
+.ham-button span::after {
   display: block;
   background-color: white;
   height: 2px;
@@ -181,17 +167,17 @@ p,
   position: relative;
 }
 
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+.ham-button span::before,
+.ham-button span::after {
   content: "";
   position: absolute;
 }
 
-.nav-toggle-label span::before {
+.ham-button span::before {
   bottom: 7px;
 }
 
-.nav-toggle-label span::after {
+.ham-button span::after {
   top: 7px;
 }
 
@@ -206,41 +192,39 @@ p,
     no-repeat center/cover;
 }
 
-.wrapper {
+.hero article {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
-.hero__heading-h1_title {
+.hero article > .heading-h1 {
   margin-bottom: 22px;
-  padding-right: 267px;
 }
-.hero__paragraph-p_cnt {
+.hero article > .paragraph-p {
   color: #fff;
-  padding-right: 483px;
+  width: 60%;
   margin-bottom: 59px;
 }
-
-.wrapper__links li {
+.input-feild {
+  display: inline-block;
+}
+.input-feild li {
   display: inline-block;
   vertical-align: middle;
 }
 
-.wrapper__links li:not(:last-child):before {
-  content: url("svg\'s/circle.svg");
+.input-feild li:not(:last-child):before {
+  content: url("odigo-icons/circle.svg");
   padding-right: 23px;
 }
 
-.wrapper__items {
+.input {
   display: inline-block;
   padding-right: 96px;
 }
-.wrapper__links li:not(:last-child):after {
+.input-feild li:not(:last-child):after {
   content: "";
   display: block;
   width: 80%;
@@ -248,12 +232,12 @@ p,
   padding-top: 20px;
 }
 
-.wrapper a {
+.input-feild a {
   display: inline-block;
   vertical-align: middle;
 }
 
-.wrapper__items {
+.input {
   border-style: hidden;
   background-color: transparent;
   color: #fff;
@@ -266,7 +250,7 @@ input::placeholder {
   width: 325px;
 }
 
-.wrapper__items:focus {
+.input:focus {
   outline: none;
   color: white;
 }
@@ -279,11 +263,12 @@ input::placeholder {
   padding: 0 0 120px 0;
 }
 
-.ms2 {
-  margin: -200px auto 0;
+.Benefits {
+  margin: -150px auto 0;
   background-color: #fff;
   box-shadow: 0 2px 20px 0 rgba(21, 24, 36, 0.16);
-  padding: 93px 0 112px 0;
+  padding: 100px 50px;
+  max-width: 86%;
 }
 
 /* ...cards section...... */
@@ -315,20 +300,25 @@ input::placeholder {
 
 .card__linkarrow {
   text-decoration: none;
-  color: #000000;
-  margin-left: 0;
-  transition: margin-right 0.3s, color 0.3s;
-}
-
-.resize{
-  zoom: 0.8;
-}
-
-.card__linkarrow:hover {
-  margin-right: 16px;
+  border: 1px solid #eef2f3;
   color: #006dfe;
+  border-radius: 50px;
+  padding: 0.5rem;
+  transition: box-shadow 0.4s ease-in-out, color 0.3s, background-color 0.4s;
 }
 
+.resize {
+  zoom: 0.8;
+  margin-left: 15px;
+}
+.card__linkarrow:hover {
+  color: #eef2f3;
+  background-color: #006dfe;
+  box-shadow: 0 0 20px 5px rgba(30, 136, 245, 0.4);
+}
+.card__linkarrow:hover > .resize {
+  stroke: #eef2f3;
+}
 /* ..........section2 end................ */
 /* ............section3 starts...................... */
 .trip-places_heading {
@@ -378,25 +368,7 @@ input::placeholder {
   width: 100%;
   height: 354px;
   object-fit: cover;
-}
-.overlay {
-  background-color: #151824;
-  position: absolute;
-  width: 100%;
-  opacity: 0.1;
-  top: 0;
-  transition: opacity .3s ease-in-out;
-}
-
-.overlay:hover {
-  z-index: 10;
-  opacity: 0.6;
-}
-.overlay-sm {
-  height: 283px;
-}
-.overlay-lg {
-  height: 354px;
+  filter: brightness(50%);
 }
 
 .trip-locations__name {
@@ -404,9 +376,7 @@ input::placeholder {
   bottom: 0;
   z-index: 20;
   padding: 0 0 29px 27px;
-
 }
-
 
 .threeclm-layout {
   width: calc((100% / 3) - 7px);
@@ -417,11 +387,8 @@ input::placeholder {
 .threeclm-layout:not(:last-child) {
   margin: 0 10px 10px 0;
 }
-
-.trip-locations__img-sm {
-  width: 100%;
+.img-sm {
   height: 283px;
-  object-fit: cover;
 }
 /* ...............section3 ends.......... */
 
@@ -430,33 +397,51 @@ input::placeholder {
 .place-details {
   padding-bottom: 139px;
 }
-.place-details-r1 {
+.places {
   padding-bottom: 77px;
 }
-.place-details__layout {
-  width: calc(100% / 2);
+.places:last-child {
+  padding-bottom: 0;
+}
+.about-places:not(:last-child) {
+  float: right;
+}
+.about-places,
+.places picture {
+  width: calc((100% - 50px) / 2);
+}
+
+.places:last-child > .about-places,
+.places picture {
   float: left;
 }
-.right {
+/* .right {
   text-align: center;
 }
 .left {
   max-width: 596px;
   text-align: left;
   padding: 28px 43px 49px 90px;
+} */
+.places > picture {
+  display: inline-block;
+  font-size: 0;
 }
-
-.place-details img {
+.rgt-mg {
+  margin-right: 40px;
+}
+.places img {
   height: 354px;
   max-width: 100%;
 }
 
-.place-details__card-title {
+.places__card-title {
   margin-bottom: 45px;
 }
-.place-details__card-para {
+.places__card-para {
   color: #102746;
   margin-bottom: 56px;
+  padding-right: 30px;
 }
 
 .box-items {
@@ -501,7 +486,6 @@ input::placeholder {
   color: #fff;
 }
 
-
 /* .icons::before {
   content: url("heart-filled.svg");
   padding: 0 14px 0 0;
@@ -517,7 +501,6 @@ input::placeholder {
 .icons {
   padding: 0 0 0 10px;
 }
-
 .img-like {
   font-size: 16px;
   text-align: end;
@@ -526,12 +509,10 @@ input::placeholder {
   position: absolute;
   right: 5%;
 }
-
 /* ............footsection.... */
 .footer__clip {
   font-size: 0;
 }
-
 .footer__clip-image {
   height: 609px;
   width: 100%;
@@ -559,17 +540,15 @@ input::placeholder {
 
 .navitems li:hover {
   color: #006dfe;
-  font-size: 18px;
 }
 .col-1 {
   float: left;
-  width: 40%;
-  text-align: center;
+  width: 55%;
 }
 
 .navitems {
   float: left;
-  width: 20%;
+  width: 15%;
   padding: 0 10px 10px 30px;
 }
 
@@ -592,7 +571,7 @@ input::placeholder {
     font-size: 14px;
     line-height: 18px;
   }
-  .nav-toggle-label {
+  .ham-button {
     display: block;
   }
 
@@ -615,14 +594,14 @@ input::placeholder {
     margin: 0 10px 10px 0;
   }
 
-  .wrapper__links li:not(:last-child):before {
+  .input-feild li:not(:last-child):before {
     padding-right: 16px;
   }
 
-  .wrapper__items {
+  .input {
     padding-right: 76px;
   }
-  .wrapper__links li:not(:last-child):after {
+  .input-feild li:not(:last-child):after {
     width: 70%;
     margin: 0 0 10px 0;
   }
@@ -632,18 +611,17 @@ input::placeholder {
     font: 16px lato;
     width: 300px;
   }
-
   .heading-h2_title {
     text-align: center;
   }
   .card__items {
-    width: calc(100% / 2);
+    width: 100%;
     text-align: center;
   }
-  .card__items:nth-last-child(1) {
-    width: 100%;
+  .card__items:not(:last-child) {
+    border-bottom: 1px solid grey;
+    margin: 0 0 20px;
   }
-
   .twoclm-layout {
     width: 100%;
     margin-bottom: 10px;
@@ -656,21 +634,14 @@ input::placeholder {
     text-align: center;
   }
 
-  .place-details__layout {
-    float: none;
-    display: inline-block;
-  }
-  .place-details {
-    text-align: center;
-  }
-  .left {
-    padding: 0 0 20px 0;
-  }
   .box-items {
     width: calc((100% - 50px) / 2);
   }
   .box-content {
     padding: 41px 100px 31px 0;
+  }
+  .Benefits {
+    padding: 70px 0 60px 0;
   }
 }
 
@@ -713,13 +684,7 @@ input::placeholder {
   .heading-h2_title {
     padding: 0 0 60px 0;
   }
-  .card__items {
-    width: 100%;
-  }
-  .card__items:not(:last-child) {
-    border-bottom: 1px solid grey;
-    margin: 0 0 20px;
-  }
+
   .trip-locations {
     padding-top: 10px;
   }
@@ -733,23 +698,25 @@ input::placeholder {
     font: 12px lato;
     width: 200px;
   }
-  .wrapper__links li:not(:last-child):after {
+  .input-feild li:not(:last-child):after {
     width: 80%;
     padding-top: 5px;
-}
-  .wrapper__items {
+  }
+  .input {
     padding-right: 76px;
   }
- 
+
   .btn-lg {
     font-size: 14px;
     font-weight: 500;
   }
 
-  .place-details__layout {
+  .about-places,
+  .places picture {
     width: 100%;
+    text-align: center;
   }
-  .place-details {
+  .about-places {
     padding-bottom: 70px;
   }
   .box-img {
@@ -773,22 +740,20 @@ input::placeholder {
     margin: 0 auto;
     width: 100%;
   }
-  .foot-link{
+  .foot-link {
     font-size: 14px;
     margin-bottom: 5px;
   }
   .col-1 {
     float: none;
     width: 100%;
+    text-align: center;
   }
   .card__linkarrow {
     font-size: 12px;
   }
   .resize {
     zoom: 0.5;
-  }
-  .ms2 {
-    padding: 70px 0 60px 0;
   }
   .imagebox {
     padding: 0 0 70px 0;
