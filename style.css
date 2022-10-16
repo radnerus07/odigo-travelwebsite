@@ -5,21 +5,21 @@
   font-family: lato, sans-serif;
 }
 h1,
-.heading-h1 {
+.heading-xl {
   color: #ffffff;
   font-size: 50px;
   font-weight: 500;
 }
 
 h2,
-.heading-h2 {
+.heading-lg {
   color: #102746;
   font-size: 35px;
   font-weight: 500;
 }
 
 h3,
-.heading-h3 {
+.heading-md {
   color: #102746;
   font-size: 30px;
   line-height: 40px;
@@ -27,14 +27,14 @@ h3,
 }
 
 h4,
-.heading-h4 {
+.heading-sm {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
 }
 p,
-.paragraph-p {
+.paragraph {
   color: #000000;
   font-size: 16px;
   line-height: 24px;
@@ -53,19 +53,23 @@ p,
   border: none;
   text-align: center;
   vertical-align: middle;
-  text-decoration: none;
+ 
   display: inline-block;
   padding: 10px 39px;
 }
 
 .btn-primary {
   background-color: #1b7dff;
-  color: #fff;
-  transition: box-shadow 0.4s;
-  border: 1px #1b7dff;
+  color: #08a0c6;
+  background: linear-gradient(to right, rgb(21 24 36 / 16%) 50%, #1b7dff 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
+    transition:all .7s ease;
+    border: 1px solid black;
 }
 .btn-primary:hover {
-  box-shadow: 0 0 20px 10px rgba(30, 136, 245, 0.4);
+  background-position:right bottom;
+  color: #fff;
 }
 
 .btn-lg {
@@ -77,14 +81,17 @@ p,
   font-weight: 400;
 }
 
+a {
+ text-decoration: none;
+}
 /* .............navigation--bar............ */
-.header-hero {
+.header {
   position: absolute;
   width: 100%;
   z-index: 1;
 }
 .nav-wrapper {
-  padding: 56px 10px;
+  padding: 28px 10px;
 }
 .navbar {
   text-align: right;
@@ -92,7 +99,6 @@ p,
 
 .navbar a {
   font-size: 18px;
-  text-decoration: none;
   color: #fff;
 }
 
@@ -119,7 +125,6 @@ p,
   display: block;
   width: 0;
   height: 2px;
-  margin-top: 10px;
   background: #fff;
   transition: width 0.3s;
 }
@@ -186,7 +191,7 @@ p,
 /* ................hero section.............. */
 
 .banner__image {
-  height: 962px;
+  min-height: 762px;
   width: 100%;
   background: url("https://live.staticflickr.com/65535/52408443403_083bd50935_k.jpg")
     no-repeat center/cover;
@@ -200,10 +205,10 @@ p,
   transform: translate(-50%, -50%);
   width: 100%;
 }
-.hero article > .heading-h1 {
+.hero article > .heading-xl {
   margin-bottom: 22px;
 }
-.hero article > .paragraph-p {
+.hero article > .paragraph{
   color: #fff;
   width: 60%;
   margin-bottom: 59px;
@@ -260,7 +265,7 @@ input::placeholder {
 
 /* ...................section-2 start.................. */
 
-.heading-h2_title {
+.heading-lg_title {
   padding: 0 0 120px 0;
 }
 
@@ -296,30 +301,33 @@ input::placeholder {
   margin-bottom: 37px;
 }
 
-.card__paragraph-p {
+.card__paragraph{
   margin-bottom: 39px;
 }
 
 .card__linkarrow {
-  text-decoration: none;
+  color: #000000;
   border: 1px solid #eef2f3;
   color: #006dfe;
   border-radius: 50px;
   padding: 0.5rem;
   transition: box-shadow 0.4s ease-in-out, color 0.3s, background-color 0.4s;
+  /* transition: color 0.3s, background-color 0.4s; */
 }
 
 .resize {
   zoom: 0.8;
   margin-left: 15px;
+  transition: margin-left 0.4s ease-in-out;
 }
 .card__linkarrow:hover {
-  color: #eef2f3;
   background-color: #006dfe;
-  box-shadow: 0 0 20px 5px rgba(30, 136, 245, 0.4);
+  color: white;
+
 }
 .card__linkarrow:hover > .resize {
-  stroke: #eef2f3;
+  /* margin-left: 15px; */
+  stroke: white;
 }
 /* ..........section2 end................ */
 /* ............section3 starts...................... */
@@ -370,6 +378,9 @@ input::placeholder {
   width: 100%;
   height: 354px;
   object-fit: cover;
+  transition: filter 0.4s ease-in-out;
+}
+.trip-locations__img:hover{
   filter: brightness(50%);
 }
 
@@ -417,14 +428,6 @@ input::placeholder {
 .places picture {
   float: left;
 }
-/* .right {
-  text-align: center;
-}
-.left {
-  max-width: 596px;
-  text-align: left;
-  padding: 28px 43px 49px 90px;
-} */
 .places > picture {
   display: inline-block;
   font-size: 0;
@@ -506,7 +509,7 @@ input::placeholder {
 .img-like {
   font-size: 16px;
   text-align: end;
-  text-decoration: none;
+ 
   color: #fff;
   position: absolute;
   right: 5%;
@@ -537,12 +540,13 @@ input::placeholder {
 .navitems li {
   list-style: none;
   color: #fff;
-  transition: font-size 0.2s;
+}
+.nav__link  {
+ 
+  color: #fff;
+  display: inline-block;
 }
 
-.navitems li:hover {
-  color: #006dfe;
-}
 .col-1 {
   float: left;
   width: 55%;
@@ -561,15 +565,15 @@ input::placeholder {
 
 @media screen and (max-width: 1024px) {
   h1,
-  .heading-h1 {
+  .heading-xl {
     font-size: 40px;
   }
   h2,
-  .heading-h2 {
+  .heading-lg {
     font-size: 28px;
   }
   p,
-  .paragraph-p {
+  .paragraph{
     font-size: 14px;
     line-height: 18px;
   }
@@ -581,14 +585,11 @@ input::placeholder {
     display: none;
   }
 
-  .banner__image {
-    height: 1062px;
-  }
-  .hero__heading-h1_title {
+  .hero__hed.heading-xl_title {
     margin-bottom: 18px;
     padding-right: 190px;
   }
-  .hero__paragraph-p_cnt {
+  .hero__paragraph_cnt {
     padding-right: 240px;
     margin-bottom: 39px;
   }
@@ -613,7 +614,7 @@ input::placeholder {
     font: 16px lato;
     width: 300px;
   }
-  .heading-h2_title {
+  .heading-lg_title {
     text-align: center;
   }
   .card__items {
@@ -650,18 +651,18 @@ input::placeholder {
 @media screen and (max-width: 768px) {
   /* ............section3 starts...................... */
   h1,
-  .heading-h1 {
+  .heading-xl {
     font-size: 25px;
   }
   .twoclm-layout {
     width: 100%;
   }
   h2,
-  .heading-h2 {
+  .heading-lg {
     font-size: 20px;
   }
   p,
-  .paragraph-p {
+  .paragraph{
     font-size: 12px;
     line-height: 14px;
   }
@@ -670,20 +671,16 @@ input::placeholder {
     width: 100%;
   }
 
-  .hero__paragraph-p_cnt {
+  .hero__paragraph_cnt {
     padding-right: 140px;
     margin-bottom: 20px;
   }
-  .hero__heading-h1_title {
+  .hero__hed.heading-xl_title {
     margin-bottom: 18px;
     padding-right: 120px;
     line-height: 30px;
   }
-
-  .banner__image {
-    height: 862px;
-  }
-  .heading-h2_title {
+  .heading-lg_title {
     padding: 0 0 60px 0;
   }
 
