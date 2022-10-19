@@ -48,28 +48,27 @@ p,
   margin-right: auto;
   overflow-x: hidden;
 }
-
+li{
+  list-style-type: none;
+}
 .btn {
   border: none;
   text-align: center;
   vertical-align: middle;
- 
+  text-transform: uppercase;
   display: inline-block;
-  padding: 10px 39px;
+  padding: 10px 29px;
 }
 
 .btn-primary {
   background-color: #1b7dff;
-  color: #08a0c6;
-  background: linear-gradient(to right, rgb(21 24 36 / 16%) 50%, #1b7dff 50%);
-    background-size: 200% 100%;
-    background-position:left bottom;
+  color: #fff;
     transition:all .7s ease;
-    border: 1px solid black;
+
+   
 }
 .btn-primary:hover {
-  background-position:right bottom;
-  color: #fff;
+  box-shadow: 0 0 20px 10px rgba(30, 136, 245, 0.4);
 }
 
 .btn-lg {
@@ -86,7 +85,7 @@ a {
 }
 /* .............navigation--bar............ */
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 1;
 }
@@ -95,11 +94,6 @@ a {
 }
 .navbar {
   text-align: right;
-}
-
-.navbar a {
-  font-size: 18px;
-  color: #fff;
 }
 
 .navbar .navbar__navlinks {
@@ -142,7 +136,6 @@ a {
   display: block;
   clear: both;
 }
-
 /* .............navigation--bar end............ */
 
 /* ...........hamburger........... */
@@ -155,7 +148,7 @@ a {
 }
 .ham-button {
   position: absolute;
-  right: 10%;
+  right: 5%;
   top: 50%;
   transform: translate(0, -50%);
   display: none;
@@ -188,6 +181,10 @@ a {
 
 /* ...........hamburger end........... */
 
+/* ....mobile-nav..... */
+
+
+/* ............mobile-nav-end.............. */
 /* ................hero section.............. */
 
 .banner__image {
@@ -213,47 +210,44 @@ a {
   width: 60%;
   margin-bottom: 59px;
 }
-.input-feild {
-  display: inline-block;
-}
-.input-feild li {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.input-feild li:not(:last-child):before {
-  content: url("odigo-icons/circle.svg");
-  padding-right: 23px;
-}
-
-.input {
-  display: inline-block;
-  padding-right: 96px;
-}
-.input-feild li:not(:last-child):after {
-  content: "";
-  display: block;
-  width: 80%;
-  border-bottom: solid 2px #fff;
-  padding-top: 20px;
-}
-
-.input-feild a {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.input {
-  border-style: hidden;
+.input-box{
+  width: 300px;
+  padding: 28px 22px 20px 36px;
   background-color: transparent;
+  border: none;
   color: #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 18px;
 }
-input,
-input::placeholder {
-  font: 18px lato;
-  color: #fff;
-  line-height: 24px;
-  width: 325px;
+
+.input-box::placeholder{
+  color:#fff;
+}
+
+.input-box:focus{
+  outline: none;
+}
+
+ .circle:hover{
+  background-color: #ffffff;
+}
+
+.circle{
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  border: 2px solid white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease-out;
+}
+
+.input_field{
+  position: relative;
+  display: inline-block;
+  margin-right: 40px;
 }
 
 .input:focus {
@@ -305,9 +299,8 @@ input::placeholder {
   margin-bottom: 39px;
 }
 
-.card__linkarrow {
+.link-arrow {
   color: #000000;
-  border: 1px solid #eef2f3;
   color: #006dfe;
   border-radius: 50px;
   padding: 0.5rem;
@@ -320,13 +313,13 @@ input::placeholder {
   margin-left: 15px;
   transition: margin-left 0.4s ease-in-out;
 }
-.card__linkarrow:hover {
+.link-arrow:hover {
   background-color: #006dfe;
   color: white;
 
 }
-.card__linkarrow:hover > .resize {
-  /* margin-left: 15px; */
+.link-arrow:hover > .resize {
+  margin-left: 15px;
   stroke: white;
 }
 /* ..........section2 end................ */
@@ -360,7 +353,7 @@ input::placeholder {
 }
 
 .twoclm-layout {
-  width: calc((100% / 2) - 5px);
+  width: calc((100% - 10px) /2);
   display: inline-block;
   position: relative;
   text-align: center;
@@ -389,16 +382,50 @@ input::placeholder {
   bottom: 0;
   z-index: 20;
   padding: 0 0 29px 27px;
+  transition: bottom 0.4s;
 }
 
+.twoclm-layout:hover > .trip-locations__name  {
+  bottom:100px
+}
+.threeclm-layout:hover > .trip-locations__name {
+  bottom:100px
+}
+
+.trip-locations__content {
+  color: transparent;
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  padding: 0 0 29px 27px;
+  text-align: left;
+  font-size: 20px;
+  transition: bottom 0.4s;
+}
+
+.threeclm-layout:hover > .trip-locations__content {
+  bottom: 50px;
+  color: white;
+}
+
+.twoclm-layout:hover > .trip-locations__content {
+  bottom: 50px;
+  color: white;
+}
+
+
+
 .threeclm-layout {
-  width: calc((100% / 3) - 7px);
-  /* float: right; */
+  width: calc((100% - 20px) / 3);
   display: inline-block;
   position: relative;
 }
 .threeclm-layout:not(:last-child) {
   margin: 0 10px 10px 0;
+}
+.threeclm-layout:hover > .trip-locations__content {
+  bottom: 50px;
+  color: white;
 }
 .img-sm {
   height: 283px;
@@ -454,11 +481,17 @@ input::placeholder {
   display: inline-block;
   margin: 50px 0 0 25px;
 }
-
+figure {
+  overflow: hidden;
+}
 .box-img {
   height: 354px;
   max-width: 100%;
   object-fit: cover;
+  transition: .8s ease-in-out;
+}
+.box-img:hover {
+  transform: scale(1.3);
 }
 .imagebox {
   font-size: 0;
@@ -582,7 +615,26 @@ input::placeholder {
   }
 
   .navigation {
-    display: none;
+    /* display: none; */
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100%;
+    background-color: #121110d1;
+    transition: transform .6s;
+    padding: 100px 0;
+  }
+  .navbar {
+    text-align: center;
+  }
+  .navbar .navbar__navlinks li:not(:last-child) {
+    margin-right: 0;
+  }
+  .navbar .navbar__navlinks li {
+    display: block;
   }
 
   .hero__hed.heading-xl_title {
@@ -593,27 +645,10 @@ input::placeholder {
     padding-right: 240px;
     margin-bottom: 39px;
   }
-  .threeclm-layout {
+  /* .threeclm-layout {
     margin: 0 10px 10px 0;
-  }
+  } */
 
-  .input-feild li:not(:last-child):before {
-    padding-right: 16px;
-  }
-
-  .input {
-    padding-right: 76px;
-  }
-  .input-feild li:not(:last-child):after {
-    width: 70%;
-    margin: 0 0 10px 0;
-  }
-
-  input,
-  input::placeholder {
-    font: 16px lato;
-    width: 300px;
-  }
   .heading-lg_title {
     text-align: center;
   }
@@ -625,16 +660,21 @@ input::placeholder {
     border-bottom: 1px solid grey;
     margin: 0 0 20px;
   }
-  .twoclm-layout {
+  /* .twoclm-layout {
     width: 100%;
     margin-bottom: 10px;
   }
   .threeclm-layout {
     width: calc((100% / 2) - 10px);
-  }
+  } */
 
   .trip-locations {
     text-align: center;
+  }
+
+  .input-field {
+  
+    margin-bottom: 10px;
   }
 
   .box-items {
@@ -645,6 +685,9 @@ input::placeholder {
   }
   .Benefits {
     padding: 70px 0 60px 0;
+  }
+  .navbar .navbar__navlinks li {
+    padding-top: 40px;
   }
 }
 
@@ -691,20 +734,13 @@ input::placeholder {
   .trip-places {
     padding: 80px 0;
   }
-
-  input,
-  input::placeholder {
-    font: 12px lato;
-    width: 200px;
+  .input-box {
+    width: 250px;
+    padding: 28px 0px 20px 36px;
+    font-size: 14px;
+    margin-bottom: 10px;
   }
-  .input-feild li:not(:last-child):after {
-    width: 80%;
-    padding-top: 5px;
-  }
-  .input {
-    padding-right: 76px;
-  }
-
+ 
   .btn-lg {
     font-size: 14px;
     font-weight: 500;
@@ -748,7 +784,7 @@ input::placeholder {
     width: 100%;
     text-align: center;
   }
-  .card__linkarrow {
+  .link-arrow {
     font-size: 12px;
   }
   .resize {
@@ -757,4 +793,29 @@ input::placeholder {
   .imagebox {
     padding: 0 0 70px 0;
   }
+}
+
+/* ......classlist...... */
+
+.display {
+  transform: translateX(0%);
+}
+/* 
+ .toggle-button::before {
+ 
+  transform: rotate(405deg);
+  background-color: #ff0000;
+}
+ .toggle-button {
+  background: transparent;
+}
+
+ .toggle-button::after {
+  
+  transform: rotate(-405deg);
+  background-color: #ff0000;
+} */
+
+.bgcolor{
+  background-color: #2a2a2ae0;
 }

@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="navbar container ">
+  <header class="header" id="nav">
+    <div class="navbar container " >
       <div class="nav-wrapper clearfix">
         <a class="navbar__brand__logo" href="javascript:void(0)"><svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 82 31"
@@ -44,10 +44,18 @@
             </li>
           </ul>
         </nav>
+        <div class="ham-button" id="hamburger" > <span class="menu-button"></span> </div>
       </div>
-
-      <label class="ham-button"> <span></span> </label>
     </div>
+<!--     
+    <div class="mobile-menu" id="mobile-view" >
+      <ul class="mobile-nav">
+        <li><a class="nav-list" href="javascript:void(0)">Articles</a></li>
+        <li><a class="nav-list" href="javascript:void(0)">Locations</a></li>
+        <li ><a class="nav-list" href="javascript:void(0)">Videos</a></li>
+        <li ><a class="nav-list" href="javascript:void(0)">Sign in</a></li>
+      </ul>
+    </div> -->
   </header>
 
 
@@ -58,11 +66,17 @@
         <p class="paragraph">Jump off balcony, onto stranger's head. Chase ball of string hide when guests
           come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for
           attack the child, open the door,</p>
-        <ul class="input-feild">
-          <li> <input class="input" type="text" placeholder="What would you like to do?"> </li>
-          <li> <input class="input" type="text" placeholder="Where would you like to do?"> </li>
-          <li> <a href="javascript:void(0)" class="btn btn-primary btn-lg">Search</a></li>
-        </ul>
+          <form action="" class="form">
+            <div class="input_field">
+                <input placeholder="What would you like to do?" type="text" class="input-box">
+                <div class="circle"></div>
+            </div>
+            <div class="input_field">
+                <input placeholder="Where would you like to go?" type="text" class="input-box">
+                <div class="circle"></div>
+               </div>
+               <a href="javascript:void(0)" class="btn btn-primary btn-lg">Search</a>
+           </form>
       </article>
     </section>
 
@@ -77,7 +91,7 @@
             <p class="card__paragraph">Jump off balcony, onto stranger's head. <br> Chase ball of string hide when
               guests come over.</p>
             <div>
-              <a class="card__linkarrow card__paragraph " href="javascript:void(0)">LEARN MORE
+              <a class="link-arrow card__paragraph " href="javascript:void(0)">LEARN MORE
                 <svg class="resize" width="24" height="18" stroke="#006dfe" xmlns="http://www.w3.org/2000/svg"
                   fill-rule="evenodd" clip-rule="evenodd" vertical-align="text-top">
                   <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
@@ -91,7 +105,7 @@
             <p class="card__paragraph">Jump off balcony, onto stranger's head. <br> Chase ball of string hide when
               guests come over. </p>
             <div>
-              <a class="card__linkarrow card__paragraph " href="javascript:void(0)">LEARN MORE
+              <a class="link-arrow card__paragraph " href="javascript:void(0)">LEARN MORE
                 <svg class="resize" width="24" height="18" stroke="#006dfe" xmlns="http://www.w3.org/2000/svg"
                   fill-rule="evenodd" clip-rule="evenodd" vertical-align="text-top">
                   <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
@@ -105,7 +119,7 @@
             <p class="card__paragraph">Jump off balcony, onto stranger's head. <br> Chase ball of string hide when
               guests come over. </p>
             <div>
-              <a class="card__linkarrow card__paragraph " href="javascript:void(0)">LEARN MORE
+              <a class="link-arrow card__paragraph " href="javascript:void(0)">LEARN MORE
                 <svg class="resize" width="24" height="18" stroke="#006dfe" xmlns="http://www.w3.org/2000/svg"
                   fill-rule="evenodd" clip-rule="evenodd" vertical-align="text-top">
                   <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
@@ -125,7 +139,7 @@
             </li>
             <li class="trip-places_heading">
               <div class="trip-places_link">
-                <a class="card__linkarrow card__paragraph" href="javascript:void(0)">VIEW ALL
+                <a class="link-arrow card__paragraph" href="javascript:void(0)">VIEW ALL
                   <svg class="resize" width="24" height="18" stroke="#006dfe" xmlns="http://www.w3.org/2000/svg"
                     fill-rule="evenodd" clip-rule="evenodd" vertical-align="text-top">
                     <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
@@ -141,11 +155,15 @@
               <img class="trip-locations__img" src="https://live.staticflickr.com/65535/52407433652_221b9bc423_b.jpg"
                 alt="mountain">
               <h2 class="heading-xl trip-locations__name"> Mount Fuji</h2>
+              <p class="paragraph trip-locations__content"> Jump off balcony, onto stranger's head.
+                Chase ball of string hide when guests come over.</p>
             </div>
             <div class="twoclm-layout">
               <img class="trip-locations__img" src="https://live.staticflickr.com/65535/52408443908_5f02781763_c.jpg"
                 alt="kyoto">
               <h2 class="heading-xl trip-locations__name">Kyoto</h2>
+              <p class="paragraph trip-locations__content"> Jump off balcony, onto stranger's head.
+                Chase ball of string hide when guests come over.</p>
             </div>
           </div>
 
@@ -154,16 +172,22 @@
               <img class="trip-locations__img img-sm"
                 src="https://live.staticflickr.com/65535/52407433427_6900b223c3_b.jpg" alt="mountain">
               <h2 class="heading-xl trip-locations__name">Tokyo</h2>
+              <p class="paragraph trip-locations__content"> Jump off balcony, onto stranger's head.
+                Chase ball of string hide when guests come over.</p>
             </div>
             <div class="threeclm-layout">
               <img class="trip-locations__img img-sm"
                 src="https://live.staticflickr.com/65535/52408443978_a5ebf7fb35_b.jpg" alt="kyoto">
               <h2 class="heading-xl trip-locations__name ">Niigata</h2>
+              <p class="paragraph trip-locations__content"> Jump off balcony, onto stranger's head.
+Chase ball of string hide when guests come over.</p>
             </div>
             <div class="threeclm-layout">
               <img class="trip-locations__img img-sm"
                 src="https://live.staticflickr.com/65535/52408444018_6cc4c6dab8_b.jpg" alt="kyoto">
               <h2 class="heading-xl trip-locations__name">Sapporo</h2>
+              <p class="paragraph trip-locations__content"> Jump off balcony, onto stranger's head.
+                Chase ball of string hide when guests come over.</p>
             </div>
           </div>
         </div>
@@ -179,7 +203,7 @@
               hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but
               under the bed, for attack the child, open the door,</p>
             <div>
-              <a class="card__linkarrow card__paragraph " href="javascript:void(0)">VIEW Prefecture
+              <a class="link-arrow card__paragraph " href="javascript:void(0)">VIEW Prefecture
                 <svg class="resize" width="24" height="18" stroke="#006dfe" xmlns="http://www.w3.org/2000/svg"
                   fill-rule="evenodd" clip-rule="evenodd" vertical-align="text-top">
                   <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
@@ -198,7 +222,7 @@
               hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but
               under the bed, for attack the child, open the door,</p>
             <div>
-              <a class="card__linkarrow card__paragraph " href="javascript:void(0)">VIEW Neighborhood
+              <a class="link-arrow card__paragraph " href="javascript:void(0)">VIEW Neighborhood
                 <svg class="resize" width="24" height="18" stroke="#006dfe" xmlns="http://www.w3.org/2000/svg"
                   fill-rule="evenodd" clip-rule="evenodd" vertical-align="text-top">
                   <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
@@ -219,7 +243,8 @@
         <div class="imagebox">
           <div class="box-items">
             <div class="box-item_merge">
-              <img class="box-img" src="https://live.staticflickr.com/65535/52408444128_c958a4f998_z.jpg" alt="nogoya">
+              <figure>
+              <img class="box-img" src="https://live.staticflickr.com/65535/52408444128_c958a4f998_z.jpg" alt="nogoya"></figure>
               <div class=" img-content">
                 <p class="img-content__text">NAGOYA</p>
                 <a class="img-like" href="javascript:void(0)">222 &#x2764<span class="icons">55 &#128172</span> </a>
@@ -227,11 +252,12 @@
             </div>
             <p class="box-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come
               over. Being gorgeous with belly side up i could pee on this.</p>
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm">Search</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm">see more</a>
           </div>
           <div class="box-items">
             <div class="box-item_merge">
-              <img class="box-img" src="https://live.staticflickr.com/65535/52407433567_fd7402b049_b.jpg" alt="NIIGATA">
+              <figure>
+              <img class="box-img" src="https://live.staticflickr.com/65535/52407433567_fd7402b049_b.jpg" alt="NIIGATA"></figure>
               <div class=" img-content">
                 <p class="img-content__text">NIIGATA</p>
                 <a class="img-like" href="javascript:void(0)">222 &#x2764<span class="icons">55 &#128172</span> </a>
@@ -239,11 +265,12 @@
             </div>
             <p class="box-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come
               over. Being gorgeous with belly side up i could pee on this.</p>
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm noverlay-lg">Search</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm noverlay-lg">see more</a>
           </div>
           <div class="box-items">
             <div class="box-item_merge">
-              <img class="box-img" src="https://live.staticflickr.com/65535/52408444163_887b75f3e1_b.jpg" alt="OSAKA">
+              <figure>
+              <img class="box-img" src="https://live.staticflickr.com/65535/52408444163_887b75f3e1_b.jpg" alt="OSAKA"></figure>
               <div class=" img-content">
                 <p class="img-content__text">OSAKA</p>
                 <a class="img-like" href="javascript:void(0)">222 &#x2764 <span class="icons">55 &#128172</span> </a>
@@ -251,11 +278,12 @@
             </div>
             <p class="box-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come
               over. Being gorgeous with belly side up i could pee on this.</p>
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm">Search</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm">see more</a>
           </div>
           <div class="box-items">
             <div class="box-item_merge">
-              <img class="box-img" src="https://live.staticflickr.com/65535/52408377585_2ca63c2e56_z.jpg" alt="SAITAMA">
+              <figure>
+              <img class="box-img" src="https://live.staticflickr.com/65535/52408377585_2ca63c2e56_z.jpg" alt="SAITAMA"></figure>
               <div class=" img-content">
                 <p class="img-content__text">SAITAMA</p>
                 <a class="img-like" href="javascript:void(0)">222 &#x2764<span class="icons">55 &#128172</span> </a>
@@ -263,11 +291,12 @@
             </div>
             <p class="box-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come
               over. Being gorgeous with belly side up i could pee on this.</p>
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm">Search</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm">see more</a>
           </div>
           <div class="box-items">
             <div class="box-item_merge">
-              <img class="box-img" src="https://live.staticflickr.com/65535/52408222199_99a0cf2c0a_z.jpg" alt="UENO">
+              <figure>
+              <img class="box-img" src="https://live.staticflickr.com/65535/52408222199_99a0cf2c0a_z.jpg" alt="UENO"></figure>
               <div class=" img-content">
                 <p class="img-content__text">UENO</p>
                 <a class="img-like" href="javascript:void(0)">222 &#x2764<span class="icons">55 &#128172</span> </a>
@@ -275,11 +304,12 @@
             </div>
             <p class="box-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come
               over. Being gorgeous with belly side up i could pee on this.</p>
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm">Search</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm">see more</a>
           </div>
           <div class="box-items">
             <div class="box-item_merge">
-              <img class="box-img" src="https://live.staticflickr.com/65535/52408222449_87249b5e2d_w.jpg" alt="SHIBUYA">
+              <figure>
+              <img class="box-img" src="https://live.staticflickr.com/65535/52408222449_87249b5e2d_w.jpg" alt="SHIBUYA"></figure>
               <div class=" img-content">
                 <p class="img-content__text">SHIBUYA</p>
                 <a class="img-like" href="javascript:void(0)">222 &#x2764 <span class="icons">55 &#128172</span> </a>
@@ -287,7 +317,7 @@
             </div>
             <p class="box-content">Jump off balcony, onto stranger's head. Chase ball of string hide when guests come
               over. Being gorgeous with belly side up i could pee on this.</p>
-            <a href="javascript:void(0)" class="btn btn-primary btn-sm">Search</a>
+            <a href="javascript:void(0)" class="btn btn-primary btn-sm">see more</a>
           </div>
         </div>
       </div>
@@ -349,6 +379,7 @@
       </div>
     </div>
   </footer>
+ <script src="script.js"></script>
 </body>
 
 </html>
