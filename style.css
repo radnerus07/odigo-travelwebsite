@@ -142,6 +142,7 @@ a {
 
 .navigation {
   display: inline-block;
+  
 }
 .navbar__brand__logo a {
   display: inline-block;
@@ -152,6 +153,7 @@ a {
   top: 50%;
   transform: translate(0, -50%);
   display: none;
+  
 }
 
 .ham-button span,
@@ -228,10 +230,6 @@ a {
   outline: none;
 }
 
- .circle:hover{
-  background-color: #ffffff;
-}
-
 .circle{
   width: 20px;
   height: 20px;
@@ -248,6 +246,7 @@ a {
   position: relative;
   display: inline-block;
   margin-right: 40px;
+  margin-bottom: 10px;
 }
 
 .input:focus {
@@ -255,6 +254,9 @@ a {
   color: white;
 }
 
+input:focus + .circle{
+  background-color: white;
+}
 /* ................section-1 end................ */
 
 /* ...................section-2 start.................. */
@@ -301,26 +303,23 @@ a {
 
 .link-arrow {
   color: #000000;
-  color: #006dfe;
   border-radius: 50px;
   padding: 0.5rem;
-  transition: box-shadow 0.4s ease-in-out, color 0.3s, background-color 0.4s;
+  transition: color 0.3s, background-color 0.4s;
   /* transition: color 0.3s, background-color 0.4s; */
 }
 
 .resize {
   zoom: 0.8;
-  margin-left: 15px;
-  transition: margin-left 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 .link-arrow:hover {
-  background-color: #006dfe;
-  color: white;
+  color: #006dfe;
 
 }
 .link-arrow:hover > .resize {
-  margin-left: 15px;
-  stroke: white;
+  transform: translateX(15px);
+  
 }
 /* ..........section2 end................ */
 /* ............section3 starts...................... */
@@ -612,10 +611,10 @@ figure {
   }
   .ham-button {
     display: block;
+    
   }
 
   .navigation {
-    /* display: none; */
     display: block;
     position: fixed;
     top: 0;
@@ -624,7 +623,6 @@ figure {
     width: 100%;
     height: 100%;
     background-color: #121110d1;
-    transition: transform .6s;
     padding: 100px 0;
   }
   .navbar {
@@ -636,7 +634,16 @@ figure {
   .navbar .navbar__navlinks li {
     display: block;
   }
-
+  .btn-lg {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .input-box {
+    width: 220px;
+    padding: 28px 0px 20px 36px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
   .hero__hed.heading-xl_title {
     margin-bottom: 18px;
     padding-right: 190px;
@@ -734,18 +741,7 @@ figure {
   .trip-places {
     padding: 80px 0;
   }
-  .input-box {
-    width: 250px;
-    padding: 28px 0px 20px 36px;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
  
-  .btn-lg {
-    font-size: 14px;
-    font-weight: 500;
-  }
-
   .about-places,
   .places picture {
     width: 100%;
@@ -793,12 +789,16 @@ figure {
   .imagebox {
     padding: 0 0 70px 0;
   }
+  .hero article > .paragraph {
+    margin-bottom: 29px;
+}
 }
 
 /* ......classlist...... */
 
 .display {
   transform: translateX(0%);
+  transition: transform .6s ease;
 }
 /* 
  .toggle-button::before {
